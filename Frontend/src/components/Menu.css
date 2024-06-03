@@ -1,0 +1,43 @@
+.menu-container {
+    text-align: center;
+    padding: 2rem;
+  }
+  .menu-container h2{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 2;
+  }
+  .menu-container p{
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .menu-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding:25px;
+  }
+  
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .menu-item p {
+    margin: 0;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+  }
+  
