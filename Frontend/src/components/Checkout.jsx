@@ -42,7 +42,7 @@ const Checkout = () => {
         'Content-Type': 'application/json',
         'Authorization': `${authToken}`,
       };
-      const response = await fetch('http://localhost:5000/api/purchase', {
+      const response = await fetch('https://food-web-backend.vercel.app/purchase', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({
