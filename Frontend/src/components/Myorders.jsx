@@ -11,7 +11,7 @@ const MyOrders = () => {
     const fetchOrders = async () => {
       const authToken = localStorage.getItem('authToken');
       try {
-        const response = await fetch('http://localhost:5000/api/myorders', {
+        const response = await fetch('https://food-web-backend.vercel.app/myorders', {
           headers: {
             'Authorization': `Bearer ${authToken}`,
           },
