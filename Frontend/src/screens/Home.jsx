@@ -6,7 +6,7 @@ import Menu from '../components/Menu'
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-gradient-to-r from-custom-dark to-custom-gray">
         <div><Navbar/></div>
         <div><Upper/></div>
         <div><Card/></div>

@@ -7,7 +7,7 @@ const Menuitem = ({ categoryname }) => {
   const filteredData = foodData.filter(item => item.CategoryName === categoryname);
 
   return (
-    <div className='flex justify-center items-center flex-wrap max-h-max p-[3rem] '>
+    <div className='flex justify-center items-center flex-wrap max-h-max p-[3rem]  '>
       {filteredData.map((item, index) => (
         <Menuitemcard
           key={index}

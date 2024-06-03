@@ -45,8 +45,8 @@ const foodData = [
       "img": caesarSaladImg,
       "options": [
         {
-          "Regular": "120",
-          "Large": "180"
+          "Regular": 120,
+          "Large": 180
         }
       ],
       "description": "Classic Caesar salad with romaine lettuce, croutons, and Parmesan cheese."
@@ -57,8 +57,8 @@ const foodData = [
       "img": greekSaladImg,
       "options": [
         {
-          "Regular": "100",
-          "Large": "160"
+          "Regular": 100,
+          "Large": 160
         }
       ],
       "description": "Fresh and healthy Greek salad with cucumbers, tomatoes, olives, and feta cheese."
@@ -69,8 +69,8 @@ const foodData = [
       "img": chocolateCakeImg,
       "options": [
         {
-          "Slice": "80",
-          "Whole": "600"
+          "Slice": 80,
+          "Whole": 600
         }
       ],
       "description": "Rich and moist chocolate cake with a creamy chocolate frosting."
@@ -81,8 +81,8 @@ const foodData = [
       "img": vanillaIceCreamImg,
       "options": [
         {
-          "Single scoop": "50",
-          "Double scoop": "90"
+          "Single scoop": 50,
+          "Double scoop": 90
         }
       ],
       "description": "Creamy and smooth vanilla ice cream made with real vanilla beans."
@@ -93,8 +93,8 @@ const foodData = [
       "img": spaghettiBologneseImg,
       "options": [
         {
-          "Regular": "150",
-          "Large": "250"
+          "Regular": 150,
+          "Large": 250
         }
       ],
       "description": "Classic Italian pasta with a rich and hearty meat sauce."
@@ -105,8 +105,8 @@ const foodData = [
       "img": penneAlfredoImg,
       "options": [
         {
-          "Regular": "140",
-          "Large": "230"
+          "Regular": 140,
+          "Large": 230
         }
       ],
       "description": "Creamy Alfredo pasta with penne and freshly grated Parmesan cheese."
@@ -117,8 +117,8 @@ const foodData = [
       "img": cocaColaImg,
       "options": [
         {
-          "Can": "50",
-          "Bottle": "70"
+          "Can": 50,
+          "Bottle": 70
         }
       ],
       "description": "Classic Coca Cola to refresh your taste buds."
@@ -129,8 +129,8 @@ const foodData = [
       "img": dietCokeImg,
       "options": [
         {
-          "Can": "50",
-          "Bottle": "70"
+          "Can": 50,
+          "Bottle": 70
         }
       ],
       "description": "Diet Coke with zero calories and the same great taste."
@@ -141,8 +141,8 @@ const foodData = [
       "img": paneerButterMasalaImg,
       "options": [
         {
-          "Half": "120",
-          "Full": "220"
+          "Half": 120,
+          "Full": 220
         }
       ],
       "description": "Rich and creamy paneer butter masala cooked in a tomato-based gravy."
@@ -153,8 +153,8 @@ const foodData = [
       "img": alooGobiImg,
       "options": [
         {
-          "Half": "100",
-          "Full": "180"
+          "Half": 100,
+          "Full": 180
         }
       ],
       "description": "A classic Indian dish with potatoes and cauliflower cooked in spices."
@@ -165,8 +165,8 @@ const foodData = [
       "img": springRollsImg,
       "options": [
         {
-          "Half": "80",
-          "Full": "150"
+          "Half": 80,
+          "Full": 150
         }
       ],
       "description": "Crispy vegetable spring rolls served with a tangy dipping sauce."
@@ -177,8 +177,8 @@ const foodData = [
       "img": vegManchurianImg,
       "options": [
         {
-          "Half": "120",
-          "Full": "200"
+          "Half": 120,
+          "Full": 200
         }
       ],
       "description": "Indo-Chinese starter with vegetable balls in a spicy, tangy sauce."
@@ -189,8 +189,8 @@ const foodData = [
       "img": chickenBiryaniImg,
       "options": [
         {
-          "Half": "170",
-          "Full": "300"
+          "Half": 170,
+          "Full": 300
         }
       ],
       "description": "Made using Indian masalas and Basmati rice. Barbequed pieces of chicken were added."
@@ -201,8 +201,8 @@ const foodData = [
       "img": fishBiryaniImg,
       "options": [
         {
-          "Half": "200",
-          "Full": "320"
+          "Half": 200,
+          "Full": 320
         }
       ],
       "description": "Delicious fish biryani made with fresh spices and basmati rice."
@@ -213,8 +213,8 @@ const foodData = [
       "img": gardenSaladImg,
       "options": [
         {
-          "Regular": "110",
-          "Large": "170"
+          "Regular": 110,
+          "Large": 170
         }
       ],
       "description": "A mix of fresh garden vegetables served with a light vinaigrette."
@@ -225,8 +225,8 @@ const foodData = [
       "img": capreseSaladImg,
       "options": [
         {
-          "Regular": "130",
-          "Large": "190"
+          "Regular": 130,
+          "Large":190
         }
       ],
       "description": "Classic Italian salad with tomatoes, mozzarella, basil, and balsamic glaze."
@@ -237,8 +237,8 @@ const foodData = [
       "img": kaleSaladImg,
       "options": [
         {
-          "Regular": "120",
-          "Large": "180"
+          "Regular": 120,
+          "Large": 180
         }
       ],
       "description": "Healthy kale salad with orange Slices, almonds, and a citrus dressing."
@@ -249,8 +249,8 @@ const foodData = [
       "img": quinoaSaladImg,
       "options": [
         {
-          "Regular": "140",
-          "Large": "200"
+          "Regular": 140,
+          "Large":200
         }
       ],
       "description": "Protein-packed quinoa salad with vegetables and a lemon vinaigrette."
@@ -261,8 +261,8 @@ const foodData = [
       "img": tiramisuImg,
       "options": [
         {
-          "Slice": "90",
-          "Whole": "650"
+          "Slice": 90,
+          "Whole": 650
         }
       ],
       "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cheese."
@@ -273,8 +273,8 @@ const foodData = [
       "img": cheesecakeImg,
       "options": [
         {
-          "Slice": "100",
-          "Whole": "700"
+          "Slice": 100,
+          "Whole": 700
         }
       ],
       "description": "Creamy cheesecake with a graham cracker crust and a berry topping."
@@ -285,8 +285,8 @@ const foodData = [
       "img": brownieImg,
       "options": [
         {
-          "piece": "60",
-          "box of 6": "320"
+          "piece": 60,
+          "box of 6": 320
         }
       ],
       "description": "Rich and fudgy brownies made with dark chocolate."
@@ -297,8 +297,8 @@ const foodData = [
       "img": fettuccineAlfredoImg,
       "options": [
         {
-          "Regular": "160",
-          "Large": "260"
+          "Regular": 160,
+          "Large":260
         }
       ],
       "description": "Creamy Alfredo sauce served with fettuccine pasta."
@@ -309,8 +309,8 @@ const foodData = [
       "img": penneArrabbiataImg,
       "options": [
         {
-          "Regular": "150",
-          "Large": "250"
+          "Regular": 150,
+          "Large":250
         }
       ],
       "description": "Spicy tomato sauce served with penne pasta."
@@ -321,8 +321,8 @@ const foodData = [
       "img": lasagnaImg,
       "options": [
         {
-          "Regular": "180",
-          "Large": "280"
+          "Regular": 180,
+          "Large": 280
         }
       ],
       "description": "Layers of pasta with meat sauce, ricotta, and mozzarella cheese."
@@ -333,8 +333,8 @@ const foodData = [
       "img": MacandCheeseimg,
       "options": [
         {
-          "Regular": "140",
-          "Large": "220"
+          "Regular": 140,
+          "Large": 220
         }
       ],
       "description": "Classic mac and cheese made with a creamy cheese sauce."
@@ -345,8 +345,8 @@ const foodData = [
       "img": cokeZeroImg,
       "options": [
         {
-          "Can": "50",
-          "Bottle": "70"
+          "Can":50,
+          "Bottle": 70
         }
       ],
       "description": "Coke Zero with the same great taste and zero sugar."
@@ -357,8 +357,8 @@ const foodData = [
       "img": spriteImg,
       "options": [
         {
-          "Can": "50",
-          "Bottle": "70"
+          "Can": 50,
+          "Bottle": 70
         }
       ],
       "description": "Refreshing lemon-lime Sprite."
@@ -369,8 +369,8 @@ const foodData = [
       "img": fantaImg,
       "options": [
         {
-          "Can": "50",
-          "Bottle": "70"
+          "Can": 50,
+          "Bottle": 70
         }
       ],
       "description": "Fruit-flavored Fanta soda."
@@ -381,8 +381,8 @@ const foodData = [
       "img": shahiPaneerImg,
       "options": [
         {
-          "Half": "130",
-          "Full": "240"
+          "Half": 140,
+          "Full":240
         }
       ],
       "description": "Creamy paneer dish cooked in a royal, rich, and aromatic gravy."
@@ -393,7 +393,7 @@ const foodData = [
       "img": choleBhatureImg,
       "options": [
         {
-          "plate": "150"
+          "plate": 150
         }
       ],
       "description": "Spicy chickpeas served with fried bread."
@@ -404,7 +404,7 @@ const foodData = [
       "img": thaliImg,
       "options": [
         {
-          "Regular": "200"
+          "Regular": 200
         }
       ],
       "description": "A traditional Indian meal with multiple dishes."
@@ -415,8 +415,8 @@ const foodData = [
       "img": bainganBhartaImg,
       "options": [
         {
-          "Half": "100",
-          "Full": "180"
+          "Half": 100,
+          "Full": 180
         }
       ],
       "description": "Smoky roasted eggplant mashed and cooked with spices."
@@ -427,8 +427,8 @@ const foodData = [
       "img": samosaImg,
       "options": [
         {
-          "Piece": "20",
-          "Plate": "100"
+          "Piece":20,
+          "Plate": 100
         }
       ],
       "description": "Crispy fried pastry filled with spiced potatoes and peas."
@@ -439,8 +439,8 @@ const foodData = [
       "img": chowmeinImg,
       "options": [
         {
-          "Half": "70",
-          "Full": "130"
+          "Half": 70,
+          "Full": 130
         }
       ],
       "description": "Stir-fried noodles with vegetables and soy sauce."
@@ -451,8 +451,8 @@ const foodData = [
       "img": stuffedMushroomsImg,
       "options": [
         {
-          "Half": "150",
-          "Full": "250"
+          "Half": 150,
+          "Full": 250
         }
       ],
       "description": "Mushrooms stuffed with cheese and herbs, then baked to perfection."
@@ -463,8 +463,8 @@ const foodData = [
       "img": chickenCurryImg,
       "options": [
         {
-          "Half": "160",
-          "Full": "280"
+          "Half": 160,
+          "Full": 280
         }
       ],
       "description": "A classic chicken curry cooked with aromatic spices and herbs."
@@ -475,8 +475,8 @@ const foodData = [
       "img": muttonRoganJoshImg,
       "options": [
         {
-          "Half": "200",
-          "Full": "350"
+          "Half": 200,
+          "Full":350
         }
       ],
       "description": "Aromatic and spicy Kashmiri mutton curry."
@@ -487,8 +487,8 @@ const foodData = [
       "img": butterChickenImg,
       "options": [
         {
-          "Half": "190",
-          "Full": "330"
+          "Half": 190,
+          "Full": 330
         }
       ],
       "description": "Rich and creamy butter chicken cooked in a tomato-based gravy."
@@ -499,8 +499,8 @@ const foodData = [
       "img": fishTikkaImg,
       "options": [
         {
-          "Half": "210",
-          "Full": "360"
+          "Half": 210,
+          "Full": 360
         }
       ],
       "description": "Marinated fish chunks grilled to perfection."

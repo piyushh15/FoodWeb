@@ -15,7 +15,8 @@ module.exports = withMT({
         
       },
       colors: {
-        'slate-gray': '#708090',
+        'custom-dark': '#0c0702',
+        'custom-gray': '#49463e',
       },
     },
   },

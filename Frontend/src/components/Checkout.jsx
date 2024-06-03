@@ -71,9 +71,9 @@ const Checkout = () => {
   };
 
   return (
-    <>
+    <div className="bg-gradient-to-r from-custom-dark to-custom-gray min-h-screen flex flex-col">
       <Navbar />
-      <div className="w-full p-5 pt-1.5 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="w-full p-8  grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow">
         <div>
           <h2 className="text-xl font-bold mb-4 text-white font-montserrat">Delivery Information</h2>
           <div className='h-full'>
@@ -123,7 +123,7 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

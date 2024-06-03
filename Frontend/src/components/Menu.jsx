@@ -18,7 +18,7 @@ const Menu = () => {
 
   return (
     <>
-    <div className="menu-container text-white font-briem">
+    <div className="menu-container text-white font-briem ">
       <h2>Explore Our Menu</h2>
       <p>
         Choose from a diverse menu featuring a delectable array of dishes. Our

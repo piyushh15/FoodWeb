@@ -35,25 +35,25 @@ const MyOrders = () => {
   };
 
   return (
-    <>
+    <div className="bg-gradient-to-r from-custom-dark to-custom-gray min-h-screen flex flex-col">
       <Navbar />
-      <div className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">My Orders</h1>
-        <table className="min-w-full bg-white">
+      <div className="container mx-auto p-4 flex-grow">
+        <h1 className="text-2xl font-bold mb-4 text-white">My Orders</h1>
+        <table className="min-w-full bg-opacity-80 rounded-lg">
           <thead>
             <tr>
-              <th className="py-2 px-4 text-white bg-gray-800">Date and Time</th>
-              <th className="py-2 px-4 text-white bg-gray-800">Total Price</th>
-              <th className="py-2 px-4 text-white bg-gray-800">View Details</th>
+              <th className="py-2 px-4 text-white font-montserrat">Date and Time</th>
+              <th className="py-2 px-4 text-white font-montserrat">Total Price</th>
+              <th className="py-2 px-4 text-white font-montserrat">View Details</th>
             </tr>
           </thead>
           <tbody>
             {orders.map((order, index) => (
               <React.Fragment key={index}>
                 <tr>
-                  <td className="border px-4 py-2 text-white">{new Date(order.date).toLocaleString()}</td>
-                  <td className="border px-4 py-2 text-white">₹{order.totalprice.toFixed(2)}</td>
-                  <td className="border px-4 py-2 text-white">
+                  <td className=" px-4 py-2 text-white text-center">{new Date(order.date).toLocaleString()}</td>
+                  <td className=" px-4 py-2 text-white text-center">₹{order.totalprice.toFixed(2)}</td>
+                  <td className=" px-4 py-2 text-white text-center">
                     <button
                       className="bg-blue-500 text-white px-4 py-2 rounded"
                       onClick={() => handleToggleExpand(index)}
@@ -64,7 +64,7 @@ const MyOrders = () => {
                 </tr>
                 {expandedOrderId === index && (
                   <tr>
-                    <td colSpan="3" className="border px-4 py-2 text-white">
+                    <td colSpan="3" className=" px-4 py-2 text-white">
                       <div className="flex flex-wrap">
                         {order.items.map((item, itemIndex) => (
                           <div key={itemIndex} className="mb-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
@@ -85,7 +85,7 @@ const MyOrders = () => {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 };
 
