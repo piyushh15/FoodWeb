@@ -79,7 +79,9 @@ app.post('/loginuser', [
 });
 
 app.post('/purchase', async (req, res) => {
+  
   const token = req.headers.authorization.split(' ')[1];
+  console.log(token);
   if (!token) return res.status(401).json({ message: 'Authorization header missing' });
 
   try {

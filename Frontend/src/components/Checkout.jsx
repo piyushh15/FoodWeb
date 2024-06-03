@@ -38,9 +38,10 @@ const Checkout = () => {
 
     try {
       const authToken = localStorage.getItem("authToken");
+      console.log(authToken);
       const headers = {
         'Content-Type': 'application/json',
-        'Authorization': `${authToken}`,
+        'Authorization': `Bearer ${authToken}`,
       };
       const response = await fetch('https://food-web-backend.vercel.app/purchase', {
         method: 'POST',
