@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.post('/api/createuser', [
+app.post('/createuser', [
   body('email').isEmail().withMessage('Incorrect email'),
   body('password').isLength({ min: 5 }).withMessage('Password must be at least 5 characters long')
 ], async (req, res) => {
@@ -49,7 +49,7 @@ app.post('/api/createuser', [
   }
 });
 
-app.post('/api/loginuser', [
+app.post('/loginuser', [
   body('email').isEmail(),
   body('password').isLength({ min: 5 }).withMessage('Password is too small')
 ], async (req, res) => {
@@ -78,7 +78,7 @@ app.post('/api/loginuser', [
   }
 });
 
-app.post('/api/purchase', async (req, res) => {
+app.post('/purchase', async (req, res) => {
   const token = req.headers.authorization.split(' ')[1];
   if (!token) return res.status(401).json({ message: 'Authorization header missing' });
 
