@@ -37,8 +37,8 @@ const MenuItemCard = ({ name, img, options, description }) => {
       alert('Please log in to add items to the cart.');
       return;
     }
-
     addToCart({ name, img, description }, quantity, selectedSize, price);
+    alert('item added successfully');
   };
 
   return (

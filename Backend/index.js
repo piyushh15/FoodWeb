@@ -79,16 +79,15 @@ app.post('/loginuser', [
 });
 
 app.post('/purchase', async (req, res) => {
-
   const token = req.headers.authorization.split(' ')[1];
-  console.log(token);
+  
   if (!token) return res.status(401).json({ message: 'Authorization header missing' });
 
   try {
     const decoded = jwt.verify(token, jwtsecret);
     const userId = decoded.user.id;
 
-    const { items, totalprice } = req.body;
+    const { items, totalprice, email, mobile, address } = req.body;
 
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ success: false, message: 'User not found' });
@@ -102,6 +101,9 @@ app.post('/purchase', async (req, res) => {
         price: item.price,
       })),
       totalprice,
+      email,
+      mobile,
+      address,
     };
 
     user.purchaseHistory.push(newPurchase);
@@ -113,6 +115,7 @@ app.post('/purchase', async (req, res) => {
     res.status(500).json({ success: false, message: 'Internal Server Error' });
   }
 });
+
 
 app.get('/myorders', async (req, res) => {
   const token = req.headers.authorization.split(' ')[1];

@@ -35,10 +35,11 @@ const Checkout = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const totalprice = parseFloat(total);
+    const { email, phone, street, city, state, pincode, country } = deliveryInfo;
+    const address = `${street}, ${city}, ${state}, ${pincode}, ${country}`;
 
     try {
       const authToken = localStorage.getItem("authToken");
-      console.log(authToken);
       const headers = {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${authToken}`,
@@ -55,6 +56,9 @@ const Checkout = () => {
             price: item.price,
           })),
           totalprice,
+          email,
+          mobile: phone,
+          address,
         }),
       });
 
@@ -63,7 +67,8 @@ const Checkout = () => {
         navigate('/');
       } else {
         const data = await response.json();
-        console.error('Purchase failed:', data.message);
+        alert("purchase failed due to some error");
+        console.error('Purchase failed:', data);
       }
     } catch (error) {
       console.error('Error:', error);
@@ -73,7 +78,7 @@ const Checkout = () => {
   return (
     <div className="bg-gradient-to-r from-custom-dark to-custom-gray min-h-screen flex flex-col">
       <Navbar />
-      <div className="w-full p-8  grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow">
+      <div className="w-full p-8 grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow">
         <div>
           <h2 className="text-xl font-bold mb-4 text-white font-montserrat">Delivery Information</h2>
           <div className='h-full'>

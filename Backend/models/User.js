@@ -15,6 +15,9 @@ const PurchaseHistorySchema = new Schema({
   items: [PurchaseItemSchema],
   date: { type: Date, default: Date.now },
   totalprice: { type: Number, required: true },
+  address: { type: String, required: true },
+  email: { type: String, required: true },
+  phone:{type:String,required:true},
 });
 
 
