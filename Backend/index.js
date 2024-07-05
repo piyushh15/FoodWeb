@@ -86,6 +86,7 @@ app.post('/purchase', async (req, res) => {
   try {
     const decoded = jwt.verify(token, jwtsecret);
     const userId = decoded.user.id;
+    console.log(userId);
 
     const { items, totalprice, email, mobile, address } = req.body;
 
@@ -125,6 +126,7 @@ app.get('/myorders', async (req, res) => {
   try {
     const decoded = jwt.verify(token, jwtsecret);
     const userId = decoded.user.id;
+    
 
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ success: false, message: 'User not found' });

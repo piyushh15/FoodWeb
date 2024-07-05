@@ -57,7 +57,7 @@ const Checkout = () => {
           })),
           totalprice,
           email,
-          mobile: phone,
+          phone,
           address,
         }),
       });
