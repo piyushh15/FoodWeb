@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
 import Navbar from './Navbar';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -65,6 +67,15 @@ const Checkout = () => {
       if (response.ok) {
         clearCart();
         navigate('/');
+        toast.success('Order Purchased successfully', {
+          position: 'top-center',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       } else {
         const data = await response.json();
         alert("purchase failed due to some error");
@@ -99,12 +110,6 @@ const Checkout = () => {
                   />
                 </div>
               ))}
-              <button
-                type="submit"
-                className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-              >
-                Proceed to Payment
-              </button>
             </form>
           </div>
         </div>
@@ -125,6 +130,13 @@ const Checkout = () => {
               <span className='text-white font-montserrat'>Total</span>
               <span className='text-white font-montserrat'>₹{total}</span>
             </div>
+            <button 
+              type="submit"
+              className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              onClick={handleSubmit} // Ensure handleSubmit is triggered on button click
+            >
+              Proceed to Payment
+            </button>
           </div>
         </div>
       </div>

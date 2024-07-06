@@ -1,13 +1,16 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { CartContext } from './CartContext';
 import cart from "../assets/carts.png";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MenuItemCard = ({ name, img, options, description }) => {
   const { addToCart } = useContext(CartContext);
 
-  // Ensure options are valid and not empty
   const defaultSize = options && options.length > 0 ? Object.keys(options[0])[0] : '';
-  const defaultPrice = defaultSize ? parseInt(options[0][defaultSize], 10) : 0;
+  //console.log('Default Size:', defaultSize);
+  const defaultPrice = defaultSize && options[0][defaultSize] ? parseInt(options[0][defaultSize], 10) : 0;
+  //console.log('Default Price:', defaultPrice);
 
   const [selectedSize, setSelectedSize] = useState(defaultSize);
   const [quantity, setQuantity] = useState(1);
@@ -37,8 +40,17 @@ const MenuItemCard = ({ name, img, options, description }) => {
       alert('Please log in to add items to the cart.');
       return;
     }
+    console.log(price);
     addToCart({ name, img, description }, quantity, selectedSize, price);
-    alert('item added successfully');
+    toast.success('Item added to cart successfully!', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
@@ -64,7 +76,7 @@ const MenuItemCard = ({ name, img, options, description }) => {
             </select>
           </div>
           <div className="flex items-center justify-between mb-2">
-            <div className="text-[0.98rem] text-white">Price: ₹{price.toFixed(2)}</div>
+            <div className="text-[0.98rem] text-white">Price: ₹{isNaN(price) ? 0 : price}</div>
             <div className="text-white">
               Quantity:
               <input

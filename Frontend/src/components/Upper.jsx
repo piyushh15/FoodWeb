@@ -8,7 +8,7 @@ const Upper = () => {
       <div className="upper-row">
         <div className="upper-left">
           <h1> Our food depends on your mood</h1>
-          <h2> Are you hungry?? Dont wait!!!</h2>
+          <h2 className="text-orange-700 font-bold"> Are you hungry?? Dont wait!!!</h2>
           <h3>Let's start to order food Now!!!</h3>
         </div>
         <div className="upper-right">
