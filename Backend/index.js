@@ -34,20 +34,41 @@ app.post('/createuser', [
   const errors = validationResult(req);
   if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });
 
-  const salt = await bcrypt.genSalt(10);
-  const secpassword = await bcrypt.hash(req.body.password, salt);
+  const { name, email, password } = req.body;
+
   try {
-    await User.create({
-      name: req.body.name,
-      email: req.body.email,
+    // Check if the user already exists
+    let user = await User.findOne({ email });
+    if (user) return res.status(400).json({ errors: [{ msg: 'User already exists' }] });
+
+    // Generate a salt and hash the password
+    const salt = await bcrypt.genSalt(10);
+    const secpassword = await bcrypt.hash(password, salt);
+
+    // Create and save the new user
+    user = new User({
+      name,
+      email,
       password: secpassword,
     });
-    res.json({ success: true });
+
+    await user.save();
+
+    // Generate a JWT token
+    const payload = {
+      user: {
+        id: user.id
+      }
+    };
+    const authToken = jwt.sign(payload, jwtsecret, { expiresIn: '1h' });
+
+    res.json({ success: true, authToken });
   } catch (error) {
     console.error(error);
     res.status(500).json({ success: false, error: 'Internal Server Error' });
   }
 });
+
 
 app.post('/loginuser', [
   body('email').isEmail(),
